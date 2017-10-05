@@ -28,6 +28,9 @@ function initialize_contants() {
 	define( 'CHILD_THEME_VERSION', $child_theme->get( 'Version' ) );
 	define( 'CHILD_TEXT_DOMAIN', $child_theme->get( 'TextDomain' ) );
 	
+	define( 'CHILD_THEME_DIR' get_stylesheet_directory() );
+	define( 'CHILD_CONFIG_DIR', CHILD_THEME_DIR . '/config/' );
+	
 } 
 
 init_constants();
