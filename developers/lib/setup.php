@@ -77,6 +77,21 @@ foreach( $config as $feature => $args ) {
  */
 function adds_new_image_sizes() {
 
+	$config = array(
+		'featured-image' => array(
+			'width' => 720,
+			'height' => 400,
+			'crop' => true,
+		),
+	);
+	
+	foreach ( $config as $name => $args ) {
+		
+		$crop = array_key_exists( 'crop', $args ) ? $args['crop'] : false;
+		add_image_size( $name, $args['width'], $args['height'], true );
+		
+	}
+
 	//* Add Image Sizes
 	add_image_size( 'featured-image', 720, 400, TRUE );
 
